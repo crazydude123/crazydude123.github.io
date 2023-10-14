@@ -125,9 +125,10 @@ button:hover {
 }
 
 .node-content {
-    width: 40%;
+    width: 40vw;
     position: absolute;
     top: 20%;
+    max-width: 500px;
 }
 
 .left {
