@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <button id="roadmap-btn">Roadmap</button>
+        <button id="resume-btn">Resume</button>
+    </nav>
+
+    <!-- Profile Picture and Text -->
+    <div class="profile">
+        <img src="media/vijay.jpg" alt="Profile Picture">
+        <p class="details">
+            Vijay Ravi
+            <span>LLM buff</span>
+            <span>RL</span>
+            <span>Physics</span>
+            <!-- Add more skills as needed -->
+        </p>
+    </div>
+    
+
+    <!-- Main Content Area -->
+    <div class="content">
+        <!-- The road with nodes -->
+        <div class="road">
+            <div class="node" data-node="1"></div>
+            <div class="node" data-node="2"></div>
+            <div class="node" data-node="3"></div>
+            <div class="node" data-node="4"></div>
+            <div class="node" data-node="5"></div>
+            <!-- Add more nodes as needed -->
+        </div>
+    
+        <!-- Node Content -->
+        <div class="node-content left" id="node-content-1">
+            <video loop autoplay muted>
+                <source src="media/legalai.mp4" type="video/mp4">
+            </video>
+            <ul>
+                <li class="short-text">LegalAI - Retrieval Augmented Generation</li>
+                <li class="short-text">200 GB Legal Corpus</li>
+                <li class="full-text" style="display:none;">Private LLaMAs</li>
+                <li class="full-text" style="display:none;">AI revolutionizing the Legal Industry</li>
+            </ul>
+        </div>
+        
+        <div class="node-content right" id="node-content-2">
+            <video class="video-2" loop autoplay muted>
+                <source src="media/rexemr.webm" type="video/mp4">
+            </video>
+            <ul>
+                <!-- Short description bullet points -->
+                <li class="short-text">RexEMR - One stop tool for Canadian Doctors</li>
+                <li class="short-text">Fill out claims to MOH and manage your appointments</li>
+        
+                <!-- Full description bullet points -->
+                <li class="full-text" style="display:none;">AI revolutionizing the medical industry</li>
+                <li class="full-text" style="display:none;">Doctors won't waste time filling forms. Ever!</li>
+                <!-- ... add more points as needed -->
+            </ul>
+        </div>
+
+        <div class="node-content left" id="node-content-3">
+            <img src="path_to_image1.jpg" alt="Image 1" class="node-img">
+            <img src="path_to_image2.jpg" alt="Image 2" class="node-img">
+            <img src="path_to_image3.jpg" alt="Image 3" class="node-img">
+            <ul>
+                <li class="short-text">Short description for Node 3</li>
+                <li class="full-text" style="display:none;">Full description for Node 3</li>
+            </ul>
+        </div>
+        
+        <!-- Node Content for Node 4 -->
+        <div class="node-content right" id="node-content-4">
+            <img src="path_to_image4.jpg" alt="Image 4" class="node-img">
+            <ul>
+                <li class="short-text">Short description for Node 4</li>
+                <li class="full-text" style="display:none;">Full description for Node 4</li>
+            </ul>
+        </div>
+        
+        <!-- Node Content for Node 5 -->
+        <div class="node-content left" id="node-content-5">
+            <img src="path_to_image5.jpg" alt="Image 5" class="node-img">
+            <ul>
+                <li class="short-text">Short description for Node 5</li>
+                <li class="full-text" style="display:none;">Full description for Node 5</li>
+            </ul>
+        </div>
+        
+        <!-- Add more node-content divs as needed -->
+    
+        <!-- ... -->
+    
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

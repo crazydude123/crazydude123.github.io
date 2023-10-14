@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222; /* Dark background */
+    color: #eee; /* Light text */
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #333;
+    position: fixed;  /* Fixed position */
+    top: 0;
+    width: 100%;
+    z-index: 10;  /* Ensure it stays on top */
+}
+
+button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Blue background */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.profile {
+    position: fixed;  /* Fixed position to ensure it stays centered even during scroll */
+    top: 100px;  /* Positioned below the header tab */
+    left: 50%;  /* Center horizontally */
+    text-align: center;
+    transform: translateX(-50%);  /* Center horizontally */
+    z-index: 5;  /* Ensure it's above the road but below nav */
+}
+
+.profile img {
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid #555;
+}
+
+.profile p.details {
+    font-size: 24px;  /* Font size for name */
+    font-weight: bold;  /* Bold text */
+    background-color: #007BFF; /* Blue background */
+    padding: 15px; /* Padding around the text for better appearance */
+    border-radius: 5px; /* Rounded corners for the background */
+    margin-top: 10px; /* Space between the image and text */
+    line-height: 1.5; /* Spacing between lines */
+    background: linear-gradient(to bottom, #8804da, transparent); /* Gradient from blue to transparent */
+}
+
+.profile p.details span {
+    font-size: 20px;  /* Smaller font size for "Skills" */
+    font-weight: normal;  /* Regular weight for "Skills" */
+    display: block;  /* Display as block to start on a new line */
+}
+
+.content {
+    position: relative;
+    height: 240vh;
+    padding: 70px 0 0 0;  /* Add top padding to avoid overlap with fixed nav */
+}
+
+.road {
+    width: 10px;
+    height: 100%;
+    background-color: #555;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;  /* Ensure the road is below the profile */
+}
+
+.node {
+    width: 20px;
+    height: 20px;
+    background-color: #FF0000;  /* Red color */
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 2;  /* Above the road but below the profile */
+    box-shadow: 0 0 10px #FF0000, 0 0 20px #FF0000;  /* Glow effect */
+}
+
+.node:hover {
+    background-color: #FF5555;  /* Slightly lighter red on hover */
+}
+
+.node[data-node="1"] {
+    top: calc(140px + 150px + 10px + 15px * 2 + 24px * 5);  /* Adjusted to start below the profile text */
+}
+
+.node[data-node="2"] {
+    top: 15%;  /* Adjusted based on the new starting position of node 1 */
+}
+
+.node[data-node="3"] {
+    top: 30%;  /* Adjust as needed based on content and design */
+}
+
+.node[data-node="4"] {
+    top: 45%;  /* Adjust as needed based on content and design */
+}
+
+.node[data-node="5"] {
+    top: 60%;  /* Adjust as needed based on content and design */
+}
+
+.node-content img.node-img {
+    max-width: 100px;  /* Adjust as necessary */
+    margin: 10px;
+    display: inline-block;
+}
+
+.node-content {
+    width: 40%;
+    position: absolute;
+    top: 20%;
+}
+
+.left {
+    left: 5%;
+    display: block; /* Stacks video and description vertically */
+}
+
+.right {
+    right: 5%;
+    display: block; /* Stacks video and description vertically */
+}
+
+.node-content video {
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.node-content video:not(.video-2) {  /* First video */
+    width: 40%;  /* Default width for the first video */
+}
+
+.video-2 {  /* Second video */
+    width: 100%;  /* Different width for the second video */
+}
+
+.left ul, .right ul {
+    text-align: center;  /* Ensure the bullet points are centered */
+}
+
+.left ul li, .right ul li {
+    display: block;  /* Make each list item appear on a new line */
+    position: relative;
+    padding-left: 25px; /* Space for the bullet point */
+}
+
+.left ul li::before, .right ul li::before {
+    content: '•';  /* Custom bullet point */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.short-text, .full-text {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;  /* Center aligned text */
+    position: relative;
+    padding-left: 25px;  /* Adjusted for the increased font size */
+    display: inline-block; /* Needed for center alignment of bullet points */
+}
+
+.short-text::before, .full-text::before {
+    content: '•';  /* Custom bullet point */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
